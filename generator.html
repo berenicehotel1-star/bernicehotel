@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة توليد QR Code غرف فندق برنيتشي</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap');
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #0b0b0b;
+            color: #fff;
+            padding: 30px;
+            text-align: center;
+        }
+        h1 { color: #d4af37; margin-bottom: 10px; font-weight: 900; }
+        .setup-box {
+            background: #111;
+            border: 1px solid #d4af37;
+            padding: 20px;
+            border-radius: 15px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #222;
+            color: #fff;
+            text-align: left;
+            font-size: 16px;
+        }
+        button {
+            background: #d4af37;
+            color: #000;
+            border: none;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .qr-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+            padding: 10px;
+        }
+        .qr-card {
+            background: #161616;
+            border: 1px solid #222;
+            padding: 20px;
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .qr-card:hover { border-color: #d4af37; }
+        .qr-card h3 { color: #d4af37; margin-bottom: 15px; font-size: 18px; }
+        .qr-holder { background: #fff; padding: 10px; border-radius: 8px; }
+        .download-btn {
+            background: #222;
+            color: #d4af37;
+            border: 1px solid #d4af37;
+            padding: 6px 12px;
+            font-size: 13px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+        .download-btn:hover { background: #d4af37; color: #000; }
+    </style>
+</head>
+<body>
+
+    <h1>لوحة تحكم توليد رموز QR Code الفندقية</h1>
+    <p>فندق برنيتشي السياحي - خدمة الغرف</p>
+
+    <div class="setup-box">
+        <label>قم بلصق رابط موقع المنيو بعد رفعه على الإنترنت هنا:</label>
+        <input type="text" id="site-url" value="bernicehotel.netlify.app">
+        <button onclick="generateAllQRs()">توليد الرموز لجميع الغرف فوراً</button>
+    </div>
+
+    <div class="qr-grid" id="qr-display-grid"></div>
+
+    <script>
+        function generateAllQRs() {
+            const grid = document.getElementById('qr-display-grid');
+            grid.innerHTML = ""; // تنظيف الشبكة
+            
+            const baseUrl = document.getElementById('site-url').value;
+
+            // مصفوفة الغرف بالكامل بناءً على طلبك
+            const allRooms = [];
+            for(let i=101; i<=114; i++) allRooms.push(i);
+            for(let i=201; i<=214; i++) allRooms.push(i);
+            for(let i=301; i<=313; i++) allRooms.push(i);
+            for(let i=401; i<=413; i++) allRooms.push(i);
+
+            // توليد كرت مستقل ورمز QR لكل غرفة
+            allRooms.forEach(room => {
+                // إنشاء الكرت
+                const card = document.createElement('div');
+                card.className = 'qr-card';
+                card.innerHTML = `<h3>غرفة رقم ${room}</h3> <div class="qr-holder" id="qr-${room}"></div>`;
+                grid.appendChild(card);
+
+                // تجهيز الرابط الخاص بهذه الغرفة تحديداً
+                // النتيجة ستكون مثل: https://site.com/index.html?room=101
+                const finalRoomUrl = `${baseUrl}?room=${room}`;
+
+                // صناعة الـ QR Code داخل الكرت باللون الأسود والخلفية البيضاء لسهولة القراءة بالهاتف
+                new QRCode(document.getElementById(`qr-${room}`), {
+                    text: finalRoomUrl,
+                    width: 150,
+                    height: 150,
+                    colorDark : "#000000",
+                    colorLight : "#ffffff",
+                    correctLevel : QRCode.CorrectLevel.H
+                });
+            });
+        }
+    </script>
+</body>
+</html>

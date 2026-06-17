@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منيو فندق برنيتشي السياحي - خدمة الغرف</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hotel-header">
+        <div class="logo-area">
+            <h1>فندق برنيتشي السياحي</h1>
+            <p class="stars">★★★★</p>
+            <div class="room-badge">رقم الغرفة: <span id="room-number">جاري التعرف...</span></div>
+        </div>
+    </header>
+
+    <nav class="menu-tabs">
+        <a href="#soups">شوربات</a>
+        <a href="#salads">سلطات</a>
+        <a href="#main-dishes">وجبات رئيسية</a>
+        <a href="#fish">أسماك</a>
+        <a href="#pasta">الباستا</a>
+        <a href="#pizza">البيتزا</a>
+        <a href="#sandwiches">السندوتشات</a>
+    </nav>
+
+    <main class="menu-container">
+
+        <section id="soups" class="menu-section">
+            <h2 class="section-title">الشوربة</h2>
+            <div class="items-grid">
+                <div class="menu-item"><h3>شوربة عدس</h3><span class="price">15 د.ل</span><button onclick="addToCart('شوربة عدس', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة سمك</h3><span class="price">25 د.ل</span><button onclick="addToCart('شوربة سمك', 25)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة ميني سترون</h3><span class="price">20 د.ل</span><button onclick="addToCart('شوربة ميني سترون', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة كريمة خضار</h3><span class="price">20 د.ل</span><button onclick="addToCart('شوربة كريمة خضار', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة دجاج</h3><span class="price">20 د.ل</span><button onclick="addToCart('شوربة دجاج', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة مشروم</h3><span class="price">20 د.ل</span><button onclick="addToCart('شوربة مشروم', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة حرير</h3><span class="price">15 د.ل</span><button onclick="addToCart('شوربة حرير', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>شوربة عربية</h3><span class="price">15 د.ل</span><button onclick="addToCart('شوربة عربية', 15)">إضافة</button></div>
+            </div>
+        </section>
+
+        <section id="salads" class="menu-section">
+            <h2 class="section-title">السلطات</h2>
+            <div class="items-grid">
+                <div class="menu-item"><h3>سلطة سيزار</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة سيزار', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة روسيه</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة روسيه', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة خضراء</h3><span class="price">12 د.ل</span><button onclick="addToCart('سلطة خضراء', 12)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة مشكل</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة مشكل', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة عربيه</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة عربيه', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة مشويه</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة مشويه', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة فواكه البحر</h3><span class="price">25 د.ل</span><button onclick="addToCart('سلطة فواكه البحر', 25)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة طحينيه</h3><span class="price">12 د.ل</span><button onclick="addToCart('سلطة طحينيه', 12)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة بابا غنوج</h3><span class="price">10 د.ل</span><button onclick="addToCart('سلطة بابا غنوج', 10)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة تبوله</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة تبوله', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة كول سلو</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة كول سلو', 15)">إضافة</button></div>
+                <div class="menu-item"><h3>سلطة كابريز</h3><span class="price">15 د.ل</span><button onclick="addToCart('سلطة كابريز', 15)">إضافة</button></div>
+                <div class="menu-item" style="grid-column: span 2;"><h3>سلطة برنيتشي (خس+طماطم+بصل+ذرة حلوة+جبنة+لانشون+زيتون+تن+خيار)</h3><span class="price">25 د.ل</span><button onclick="addToCart('سلطة برنيتشي الفاخرة', 25)">إضافة</button></div>
+            </div>
+        </section>
+
+        <section id="main-dishes" class="menu-section">
+            <h2 class="section-title">الوجبات الرئيسية</h2>
+            <p class="section-note">* جميع الوجبات مرفقة مع: رز بالخضار سوتي + بطاطا شيبس + كروكيت أو بوريك</p>
+            <div class="items-grid">
+                <div class="menu-item"><h3>دجاج كوردن بلو</h3><span class="price">65 د.ل</span><button onclick="addToCart('دجاج كوردن بلو', 65)">إضافة</button></div>
+                <div class="menu-item"><h3>إسكالوب دجاج</h3><span class="price">70 د.ل</span><button onclick="addToCart('إسكالوب دجاج', 70)">إضافة</button></div>
+                <div class="menu-item"><h3>دجاج كريسبي</h3><span class="price">75 د.ل</span><button onclick="addToCart('دجاج كريسبي', 75)">إضافة</button></div>
+                <div class="menu-item"><h3>دجاج كنتاكي</h3><span class="price">65 د.ل</span><button onclick="addToCart('دجاج كنتاكي', 65)">إضافة</button></div>
+                <div class="menu-item"><h3>شيش طاوق دجاج</h3><span class="price">80 د.ل</span><button onclick="addToCart('شيش طاوق دجاج', 80)">إضافة</button></div>
+                <div class="menu-item"><h3>فاهيتا دجاج</h3><span class="price">65 د.ل</span><button onclick="addToCart('فاهيتا دجاج', 65)">إضافة</button></div>
+                <div class="menu-item"><h3>دجاج مشوي</h3><span class="price">85 د.ل</span><button onclick="addToCart('دجاج مشوي', 85)">إضافة</button></div>
+                <div class="menu-item"><h3>قلي لحم بالمشروم (فقاع)</h3><span class="price">100 د.ل</span><button onclick="addToCart('قلي لحم بالمشروم', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>تبون ستيك مشوي</h3><span class="price">85 د.ل</span><button onclick="addToCart('تبون ستيك مشوي', 85)">إضافة</button></div>
+                <div class="menu-item"><h3>فاهيتا لحم</h3><span class="price">100 د.ل</span><button onclick="addToCart('فاهيتا لحم', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>ستيك لحم بقر</h3><span class="price">100 د.ل</span><button onclick="addToCart('ستيك لحم بقر', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>فلي دجاج ألفريدو</h3><span class="price">75 د.ل</span><button onclick="addToCart('فلي دجاج ألفريدو', 75)">إضافة</button></div>
+                <div class="menu-item"><h3>كبده إسكندراني</h3><span class="price">100 د.ل</span><button onclick="addToCart('كبده إسكندراني', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>ريش خروف مشوي</h3><span class="price">120 د.ل</span><button onclick="addToCart('ريش خروف مشوي', 120)">إضافة</button></div>
+                <div class="menu-item"><h3>ستيك خروف مشوي</h3><span class="price">120 د.ل</span><button onclick="addToCart('ستيك خروف مشوي', 120)">إضافة</button></div>
+                <div class="menu-item"><h3>كباب كفته</h3><span class="price">100 د.ل</span><button onclick="addToCart('كباب كفته', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>كبده مشويه</h3><span class="price">120 د.ل</span><button onclick="addToCart('كبده مشويه', 120)">إضافة</button></div>
+                <div class="menu-item" style="grid-column: span 2;"><h3>مشاوي مشكل برنيتشي (كباب+كفته+شيش+كبده+ريش خروف+ستيك لحم+دجاج مشوي+مرقاز)</h3><span class="price">150 د.ل</span><button onclick="addToCart('مشاوي مشكل برنيتشي', 150)">إضافة</button></div>
+            </div>
+        </section>
+
+        <section id="fish" class="menu-section">
+            <h2 class="section-title">الأسماك</h2>
+            <p class="section-note">* الوجبات مرفقة مع: رز صيادية + خضار سوتي + بطاطا</p>
+            <div class="items-grid">
+                <div class="menu-item"><h3>قاجوج مشوي</h3><span class="price">100 د.ل</span><button onclick="addToCart('قاجوج مشوي', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>قاجوج مقلي</h3><span class="price">100 د.ل</span><button onclick="addToCart('قاجوج مقلي', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>حمرايه محشيه في الفرن</h3><span class="price">100 د.ل</span><button onclick="addToCart('حمرايه محشيه في الفرن', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>قاجوج سنقاري</h3><span class="price">100 د.ل</span><button onclick="addToCart('قاجوج سنقاري', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>جمبري مشوي</h3><span class="price">120 د.ل</span><button onclick="addToCart('جمبري مشوي', 120)">إضافة</button></div>
+                <div class="menu-item"><h3>جمبري فرايد</h3><span class="price">100 د.ل</span><button onclick="addToCart('جمبري فرايد', 100)">إضافة</button></div>
+                <div class="menu-item"><h3>سمك فيلي بانيه</h3><span class="price">85 د.ل</span><button onclick="addToCart('سمك فيلي بانيه', 85)">إضافة</button></div>
+                <div class="menu-item"><h3>سبيط مقلي</h3><span class="price">120 د.ل</span><button onclick="addToCart('سبيط مقلي', 120)">إضافة</button></div>
+                <div class="menu-item" style="grid-column: span 2;"><h3>صينية فواكه البحر برنيتشي (قاجوج+سبيط+حمرايه+سمك فيلي+جمبري+مرجان)</h3><span class="price">150 د.ل</span><button onclick="addToCart('صينية فواكه البحر برنيتشي', 150)">إضافة</button></div>
+            </div>
+        </section>
+
+        <section id="pasta" class="menu-section">
+            <h2 class="section-title">الباستا</h2>
+            <div class="items-grid">
+                <div class="menu-item"><h3>سباقيتي ألفريدو</h3><span class="price">55 د.ل</span><button onclick="addToCart('سباقيتي ألفريدو', 55)">إضافة</button></div>
+                <div class="menu-item"><h3>لازانيا بالمفروم</h3><span class="price">65 د.ل</span><button onclick="addToCart('لازانيا بالمفروم', 65)">إضافة</button></div>
+                <div class="menu-item"><h3>سباقيتي بالمفروم والجبنه</h3><span class="price">65 د.ل</span><button onclick="addToCart('سباقيتي بالمفروم والجبنه', 65)">إضافة</button></div>
+                <div class="menu-item"><h3>سباقيتي فواكه البحر</h3><span class="price">70 د.ل</span><button onclick="addToCart('سباقيتي فواكه البحر', 70)">إضافة</button></div>
+                <div class="menu-item"><h3>سباقيتي نابولتين</h3><span class="price">45 د.ل</span><button onclick="addToCart('سباقيتي نابولتين', 45)">إضافة</button></div>
+                <div class="menu-item"><h3>سباقيتي بالكريمه والمشروم</h3><span class="price">55 د.ل</span><button onclick="addToCart('سباقيتي بالكريمه والمشروم', 55)">إضافة</button></div>
+                <div class="menu-item"><h3>مكرونه بالسلامون</h3><span class="price">65 د.ل</span><button onclick="addToCart('مكرونه بالسلامون', 65)">إضافة</button></div>
+                <div class="menu-item"><h3>مكرونه بنه ارابياته</h3><span class="price">50 د.ل</span><button onclick="addToCart('مكرونه بنه ارابياته', 50)">إضافة</button></div>
+                <div class="menu-item"><h3>لازانيا فواكه البحر</h3><span class="price">85 د.ل</span><button onclick="addToCart('لازانيا فواكه البحر', 85)">إضافة</button></div>
+            </div>
+        </section>
+
+        <section id="pizza" class="menu-section">
+            <h2 class="section-title">البيتزا</h2>
+            <div class="items-grid">
+                <div class="menu-item"><h3>بيتزا مرجريتا</h3><span class="price">35 د.ل</span><button onclick="addToCart('بيتزا مرجريتا', 35)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا تن</h3><span class="price">35 د.ل</span><button onclick="addToCart('بيتزا تن', 35)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا فواكه البحر</h3><span class="price">50 د.ل</span><button onclick="addToCart('بيتزا فواكه البحر', 50)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا مشكل</h3><span class="price">40 د.ل</span><button onclick="addToCart('بيتزا مشكل', 40)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا دجاج</h3><span class="price">45 د.ل</span><button onclick="addToCart('بيتزا دجاج', 45)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا اربع اجبان</h3><span class="price">45 د.ل</span><button onclick="addToCart('بيتزا اربع اجبان', 45)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا مفروم</h3><span class="price">45 د.ل</span><button onclick="addToCart('بيتزا مفروم', 45)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا ملفوفه</h3><span class="price">40 د.ل</span><button onclick="addToCart('بيتزا ملفوفه', 40)">إضافة</button></div>
+                <div class="menu-item"><h3>بيتزا بروسطات</h3><span class="price">40 د.ل</span><button onclick="addToCart('بيتزا بروسطات', 40)">إضافة</button></div>
+                <div class="menu-item" style="grid-column: span 2;"><h3>بيتزا برنيتشي (دجاج+مفروم+مرقاز+سلامي+مشروم+أجبان)</h3><span class="price">55 د.ل</span><button onclick="addToCart('بيتزا برنيتشي الفاخرة', 55)">إضافة</button></div>
+            </div>
+        </section>
+
+        <section id="sandwiches" class="menu-section">
+            <h2 class="section-title">السندوتشات</h2>
+            <div class="items-grid">
+                <div class="menu-item"><h3>سندوتش كريسبي</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش كريسبي', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش زنجر</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش زنجر', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش طاكوس مفروم</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش طاكوس مفروم', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش طاكوس بالدجاج</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش طاكوس بالدجاج', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش هامبرجر</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش هامبرجر', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش تشيز برجر</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش تشيز برجر', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش كبده إسكندراني</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش كبده إسكندراني', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش باقيتو بالدجاج</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش باقيتو بالدجاج', 20)">إضافة</button></div>
+                <div class="menu-item"><h3>سندوتش باقيتو بالمفروم</h3><span class="price">20 د.ل</span><button onclick="addToCart('سندوتش باقيتو بالمفروم', 20)">إضافة</button></div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="cart-preview" id="cart-preview">
+        <div class="cart-info">
+            <span id="cart-count">0 وجبات</span> - الإجمالي: <span id="cart-total">0 د.ل</span>
+        </div>
+        <button class="checkout-btn" onclick="toggleCartModal()">عرض السلة</button>
+    </div>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="modal-content">
+            <h2>تفاصيل طلب الغرفة</h2>
+            <ul id="cart-items-list">
+                <li class="empty-msg">السلة فارغة حالياً</li>
+            </ul>
+            <div class="modal-actions">
+                <button class="close-btn" onclick="toggleCartModal()">إغلاق</button>
+                <button class="submit-order-btn" onclick="sendOrder()">تأكيد وإرسال للمطبخ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // مصفوفة الغرف المتاحة بالفندق التي حددتها أنت
+        const validRooms = [];
+        for(let i=101; i<=114; i++) validRooms.push(i.toString());
+        for(let i=201; i<=214; i++) validRooms.push(i.toString());
+        for(let i=301; i<=313; i++) validRooms.push(i.toString());
+        for(let i=401; i<=413; i++) validRooms.push(i.toString());
+
+        // التقاط الغرفة من الرابط (مثال: index.html?room=105)
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentRoom = urlParams.get('room');
+
+        let isRoomVerified = false;
+        const roomBadge = document.getElementById('room-number');
+
+        if (currentRoom && validRooms.includes(currentRoom)) {
+            roomBadge.innerText = `غرفة ${currentRoom}`;
+            isRoomVerified = true;
+        } else {
+            roomBadge.innerText = "غير معروفة! الرجاء إعادة مسح الـ QR الخاص بالغرفة";
+            roomBadge.style.color = "#ff4d4d";
+        }
+
+        let cart = [];
+
+        function addToCart(name, price) {
+            if(!isRoomVerified) {
+                alert("تنبيه: لا يمكن الطلب لأن رقم الغرفة غير معروف، يرجى مسح رمز QR الموجود في غرفتك.");
+                return;
+            }
+            cart.push({ name, price });
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById('cart-count').innerText = `${cart.length} وجبات`;
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            document.getElementById('cart-total').innerText = `${total} د.ل`;
+        }
+
+        function toggleCartModal() {
+            const modal = document.getElementById('cart-modal');
+            modal.classList.toggle('active');
+            
+            const list = document.getElementById('cart-items-list');
+            if(cart.length === 0) {
+                list.innerHTML = '<li class="empty-msg">السلة فارغة حالياً</li>';
+                return;
+            }
+            list.innerHTML = cart.map((item, index) => `
+                <li>
+                    <span>${item.name}</span>
+                    <div>
+                        <strong>${item.price} د.ل</strong>
+                        <button onclick="removeFromCart(${index})" style="background:none; border:none; color:#ff4d4d; margin-right:10px; cursor:pointer;">❌</button>
+                    </div>
+                </li>
+            `).join('');
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+            toggleCartModal();
+        }
+
+        function sendOrder() {
+            if(cart.length === 0) {
+                alert("سلتك فارغة!");
+                return;
+            }
+            alert(`تم استلام طلبك بنجاح من الغرفة رقم: ${currentRoom}.\nجاري إرساله للمطبخ فوراً!`);
+            cart = [];
+            updateCartUI();
+            toggleCartModal();
+        }
+    </script>
+</body>
+</html>
