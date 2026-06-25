@@ -241,7 +241,7 @@
                 alert("سلتك فارغة!");
                 return;
             }
-            alert(`تم استلام طلبك بنجاح من الغرفة رقم: ${currentRoom}.\nجاري إرساله للمطبخ فوراً!`);
+          sendOrderToFirebase(currentRoom, cart); alert(`تم استلام طلبك بنجاح من الغرفة رقم: ${currentRoom}.\nجاري إرساله للمطبخ فوراً!`);
             cart = [];
             updateCartUI();
             toggleCartModal();
